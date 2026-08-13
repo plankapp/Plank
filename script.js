@@ -179,7 +179,7 @@ const I18N = {
     'download.eyebrow': 'Download',
     'download.h2': 'Ready to hold the plank?',
     'download.p': 'One APK file, no Google Play. Install it and start your streak today.',
-    'download.version': 'Version 3.13.0 · Android',
+    'download.version': 'Version 3.12.7 · Android',
     'download.note': 'If Android warns about an unknown source — allow installs in Settings → Security and try again.',
     'download.contact': 'Questions or feedback? Email',
 
@@ -265,7 +265,7 @@ const I18N = {
     'download.eyebrow': 'Download',
     'download.h2': 'Klaar om de plank te houden?',
     'download.p': 'Eén APK-bestand, geen Google Play. Installeer en begin vandaag je reeks.',
-    'download.version': 'Versie 3.13.0 · Android',
+    'download.version': 'Versie 3.12.7 · Android',
     'download.note': 'Als Android waarschuwt voor een onbekende bron — sta installatie toe bij Instellingen → Beveiliging en probeer het opnieuw.',
     'download.contact': 'Vragen of feedback? Mail naar',
 
