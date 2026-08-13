@@ -93,7 +93,7 @@ const I18N = {
     'download.eyebrow': 'Завантаження',
     'download.h2': 'Готовий тримати планку?',
     'download.p': 'Один APK-файл, без Google Play. Встанови й почни серію вже сьогодні.',
-    'download.version': 'Версія 3.13.0 · Android',
+    'download.version': 'Версія 3.12.7 · Android',
     'download.note': 'Якщо Android попередить про невідоме джерело — дозволь встановлення в Налаштуваннях → Безпека і спробуй ще раз.',
     'download.contact': 'Питання чи пропозиції? Пишіть на',
 
