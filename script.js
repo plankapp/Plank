@@ -1,3 +1,11 @@
+/* ════════════════════════════════════════════════════════════
+   📌 ВЕРСІЯ ДОДАТКУ — при кожному релізі міняти ЛИШЕ цей рядок.
+   Більше НІДЕ на сайті (index.html, style.css) версію правити
+   не треба — вона підставляється автоматично у всі 3 мови
+   (UA/EN/NL) через плейсхолдер {version} у setLanguage() нижче.
+   ════════════════════════════════════════════════════════════ */
+const APP_VERSION = '3.12.7';
+
 /* Nav gets a background once the page scrolls under it */
 const nav = document.getElementById('nav');
 if (nav) {
@@ -93,7 +101,7 @@ const I18N = {
     'download.eyebrow': 'Завантаження',
     'download.h2': 'Готовий тримати планку?',
     'download.p': 'Один APK-файл, без Google Play. Встанови й почни серію вже сьогодні.',
-    'download.version': 'Версія 3.12.7 · Android',
+    'download.version': 'Версія {version} · Android',
     'download.note': 'Якщо Android попередить про невідоме джерело — дозволь встановлення в Налаштуваннях → Безпека і спробуй ще раз.',
     'download.contact': 'Питання чи пропозиції? Пишіть на',
 
@@ -179,7 +187,7 @@ const I18N = {
     'download.eyebrow': 'Download',
     'download.h2': 'Ready to hold the plank?',
     'download.p': 'One APK file, no Google Play. Install it and start your streak today.',
-    'download.version': 'Version 3.12.7 · Android',
+    'download.version': 'Version {version} · Android',
     'download.note': 'If Android warns about an unknown source — allow installs in Settings → Security and try again.',
     'download.contact': 'Questions or feedback? Email',
 
@@ -265,7 +273,7 @@ const I18N = {
     'download.eyebrow': 'Download',
     'download.h2': 'Klaar om de plank te houden?',
     'download.p': 'Eén APK-bestand, geen Google Play. Installeer en begin vandaag je reeks.',
-    'download.version': 'Versie 3.12.7 · Android',
+    'download.version': 'Versie {version} · Android',
     'download.note': 'Als Android waarschuwt voor een onbekende bron — sta installatie toe bij Instellingen → Beveiliging en probeer het opnieuw.',
     'download.contact': 'Vragen of feedback? Mail naar',
 
@@ -279,22 +287,24 @@ function setLanguage(lang) {
   const dict = I18N[lang];
   if (!dict) return;
 
+  const withVersion = (str) => str.replace('{version}', APP_VERSION);
+
   document.documentElement.lang = HTML_LANG[lang] || lang;
 
   const title = dict['meta.title'];
-  if (title) document.title = title;
+  if (title) document.title = withVersion(title);
   const desc = dict['meta.description'];
   const metaDesc = document.querySelector('meta[name="description"]');
-  if (desc && metaDesc) metaDesc.setAttribute('content', desc);
+  if (desc && metaDesc) metaDesc.setAttribute('content', withVersion(desc));
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) el.textContent = dict[key];
+    if (dict[key] !== undefined) el.textContent = withVersion(dict[key]);
   });
 
   document.querySelectorAll('[data-i18n-alt]').forEach(el => {
     const key = el.getAttribute('data-i18n-alt');
-    if (dict[key] !== undefined) el.setAttribute('alt', dict[key]);
+    if (dict[key] !== undefined) el.setAttribute('alt', withVersion(dict[key]));
   });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {

@@ -276,7 +276,9 @@
       <p data-i18n="download.p">Один APK-файл, без Google Play. Встанови й почни серію вже сьогодні.</p>
     </div>
     <a class="btn-primary" href="Plank.apk" download data-i18n="nav.cta">Завантажити APK</a>
-    <p class="download-version" data-i18n="download.version">Версія  3.12.7 · Android</p>
+    <!-- This text is overwritten by setLanguage() on load from APP_VERSION in script.js —
+         it only matters as a fallback if JS fails to run, so it's fine to leave stale. -->
+    <p class="download-version" data-i18n="download.version">Версія 3.12.7 · Android</p>
     <p class="download-note" data-i18n="download.note">Якщо Android попередить про невідоме джерело — дозволь встановлення в Налаштуваннях → Безпека і спробуй ще раз.</p>
     <p class="download-contact"><span data-i18n="download.contact">Питання чи пропозиції? Пишіть на</span> <a href="mailto:plank.support@gmail.com">plank.support@gmail.com</a></p>
   </div>
