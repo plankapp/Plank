@@ -4,7 +4,7 @@
    не треба — вона підставляється автоматично у всі 3 мови
    (UA/EN/NL) через плейсхолдер {version} у setLanguage() нижче.
    ════════════════════════════════════════════════════════════ */
-const APP_VERSION = '3.12.7';
+const APP_VERSION = '3.13.0';
 
 /* Nav gets a background once the page scrolls under it */
 const nav = document.getElementById('nav');
